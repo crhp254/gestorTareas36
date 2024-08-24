@@ -101,78 +101,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! Imagenes/nubesfondo.jpg */ "./src/Imagenes/nubesfondo.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `/* Estilos generales */
+___CSS_LOADER_EXPORT___.push([module.id, `/* Estilos generales para toda la página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Pacifico', Arial, sans-serif;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___}); /* Establece la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: #FFD6FF; /* Color de fondo de respaldo si la imagen no se carga */
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #866dd3;
 }
+
 
 /* Estilos para el contenedor principal */
 #app {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgb(0, 0, 0,0.1);
+    background-color: transparent; /* Hace el fondo del contenedor transparente */
+    padding: 20px; /* Mantiene el padding para que el contenido no toque los bordes */
+    border-radius: 5px; /* Puedes mantener el borde redondeado si deseas */
+    box-shadow: none; /* Elimina la sombra para que no se vea el contorno del contenedor */
 }
+
 
 /* Estilos para el formulario */
 form {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Usa flexbox para alinear los elementos del formulario */
+    justify-content: space-between; /* Espacia los elementos del formulario */
 }
 
-/* Estilos al input */
+/* Estilos para el campo de entrada */
 input {
-    width: 75%;
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    width: 75%; /* Establece el ancho del campo de entrada al 75% del contenedor padre */
+    padding: 8px; /* Añade un padding de 8px dentro del campo */
+    margin-right: 10px; /* Añade un margen derecho de 10px */
+    border: 1px solid #E7C6FF; /* Aplica un borde gris claro */
+    border-radius: 50px; /* Redondea las esquinas del campo */
 }
 
-/* Estilos al boton */
+/* Estilos para el botón */
 button {
-    padding: 5px 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    padding: 5px 8px; /* Añade un padding de 5px arriba y abajo, y 8px a los lados */
+    background-color: #B8C0FF; /* Establece el color de fondo del botón */
+    color: white; /* Establece el color del texto en el botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 50px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
 }
 
-/* Estilos de la lista */
+/* Estilos para la lista no ordenada */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
 }
 
-/*Estilos a los elementos de la lista*/
+/* Estilos para los elementos de la lista con forma de nube */
 li {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-top: 10px;
+    background-color: #f4f4f4; /* Color de fondo de la "nube" */
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 50px; /* Redondea el recuadro principal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto de elevación */
+    z-index: 1; /* Asegura que el recuadro esté delante de los pseudo-elementos */
 }
 
-/* Estilos para cuando una tarea esta completada */
+/* Ajustes adicionales para las tareas completadas */
 li.completed {
     text-decoration: line-through;
     color: #888;
-}`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA,sBAAsB;AACtB;IACI,8BAA8B;IAC9B,yBAAyB;IACzB,SAAS;IACT,UAAU;IACV,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA,yCAAyC;AACzC;IACI,uBAAuB;IACvB,aAAa;IACb,kBAAkB;IAClB,qCAAqC;AACzC;;AAEA,+BAA+B;AAC/B;IACI,aAAa;IACb,8BAA8B;AAClC;;AAEA,qBAAqB;AACrB;IACI,UAAU;IACV,YAAY;IACZ,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA,qBAAqB;AACrB;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,eAAe;AACnB;;AAEA,wBAAwB;AACxB;IACI,gBAAgB;IAChB,UAAU;AACd;;AAEA,sCAAsC;AACtC;IACI,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA,kDAAkD;AAClD;IACI,6BAA6B;IAC7B,WAAW;AACf","sourcesContent":["/* Estilos generales */\r\nbody {\r\n    font-family: Arial, sans-serif;\r\n    background-color: #f4f4f4;\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n/* Estilos para el contenedor principal */\r\n#app {\r\n    background-color: white;\r\n    padding: 20px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 0 10px rgb(0, 0, 0,0.1);\r\n}\r\n\r\n/* Estilos para el formulario */\r\nform {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n/* Estilos al input */\r\ninput {\r\n    width: 75%;\r\n    padding: 8px;\r\n    margin-right: 10px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 3px;\r\n}\r\n\r\n/* Estilos al boton */\r\nbutton {\r\n    padding: 5px 8px;\r\n    background-color: #007bff;\r\n    color: white;\r\n    border: none;\r\n    border-radius: 3px;\r\n    cursor: pointer;\r\n}\r\n\r\n/* Estilos de la lista */\r\nul {\r\n    list-style: none;\r\n    padding: 0;\r\n}\r\n\r\n/*Estilos a los elementos de la lista*/\r\nli {\r\n    background-color: #f4f4f4;\r\n    padding: 10px;\r\n    border: 1px solid #ddd;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\n/* Estilos para cuando una tarea esta completada */\r\nli.completed {\r\n    text-decoration: line-through;\r\n    color: #888;\r\n}"],"sourceRoot":""}]);
+    background-color: #e0e0e0; /* Color de fondo diferente para las nubes completadas */
+}
+
+
+`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA,0CAA0C;AAC1C;IACI,0CAA0C;IAC1C,yDAAgD,EAAE,iCAAiC;IACnF,sBAAsB,EAAE,kDAAkD;IAC1E,2BAA2B,EAAE,8BAA8B;IAC3D,4BAA4B,EAAE,kCAAkC;IAChE,yBAAyB,EAAE,wDAAwD;IACnF,SAAS;IACT,UAAU;IACV,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,cAAc;AAClB;;;AAGA,yCAAyC;AACzC;IACI,6BAA6B,EAAE,8CAA8C;IAC7E,aAAa,EAAE,kEAAkE;IACjF,kBAAkB,EAAE,kDAAkD;IACtE,gBAAgB,EAAE,oEAAoE;AAC1F;;;AAGA,+BAA+B;AAC/B;IACI,aAAa,EAAE,0DAA0D;IACzE,8BAA8B,EAAE,yCAAyC;AAC7E;;AAEA,qCAAqC;AACrC;IACI,UAAU,EAAE,wEAAwE;IACpF,YAAY,EAAE,6CAA6C;IAC3D,kBAAkB,EAAE,oCAAoC;IACxD,yBAAyB,EAAE,+BAA+B;IAC1D,mBAAmB,EAAE,oCAAoC;AAC7D;;AAEA,0BAA0B;AAC1B;IACI,gBAAgB,EAAE,8DAA8D;IAChF,yBAAyB,EAAE,0CAA0C;IACrE,YAAY,EAAE,6CAA6C;IAC3D,YAAY,EAAE,+BAA+B;IAC7C,mBAAmB,EAAE,oCAAoC;IACzD,eAAe,EAAE,wDAAwD;AAC7E;;AAEA,sCAAsC;AACtC;IACI,gBAAgB,EAAE,mCAAmC;IACrD,UAAU,EAAE,sCAAsC;AACtD;;AAEA,6DAA6D;AAC7D;IACI,yBAAyB,EAAE,gCAAgC;IAC3D,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,mBAAmB,EAAE,mCAAmC;IACxD,yCAAyC,EAAE,0CAA0C;IACrF,UAAU,EAAE,iEAAiE;AACjF;;AAEA,oDAAoD;AACpD;IACI,6BAA6B;IAC7B,WAAW;IACX,yBAAyB,EAAE,wDAAwD;AACvF","sourcesContent":["/* Estilos generales para toda la página */\r\nbody {\r\n    font-family: 'Pacifico', Arial, sans-serif;\r\n    background-image: url('Imagenes/nubesfondo.jpg'); /* Establece la imagen de fondo */\r\n    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */\r\n    background-position: center; /* Centra la imagen de fondo */\r\n    background-repeat: no-repeat; /* Evita que la imagen se repita */\r\n    background-color: #FFD6FF; /* Color de fondo de respaldo si la imagen no se carga */\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #866dd3;\r\n}\r\n\r\n\r\n/* Estilos para el contenedor principal */\r\n#app {\r\n    background-color: transparent; /* Hace el fondo del contenedor transparente */\r\n    padding: 20px; /* Mantiene el padding para que el contenido no toque los bordes */\r\n    border-radius: 5px; /* Puedes mantener el borde redondeado si deseas */\r\n    box-shadow: none; /* Elimina la sombra para que no se vea el contorno del contenedor */\r\n}\r\n\r\n\r\n/* Estilos para el formulario */\r\nform {\r\n    display: flex; /* Usa flexbox para alinear los elementos del formulario */\r\n    justify-content: space-between; /* Espacia los elementos del formulario */\r\n}\r\n\r\n/* Estilos para el campo de entrada */\r\ninput {\r\n    width: 75%; /* Establece el ancho del campo de entrada al 75% del contenedor padre */\r\n    padding: 8px; /* Añade un padding de 8px dentro del campo */\r\n    margin-right: 10px; /* Añade un margen derecho de 10px */\r\n    border: 1px solid #E7C6FF; /* Aplica un borde gris claro */\r\n    border-radius: 50px; /* Redondea las esquinas del campo */\r\n}\r\n\r\n/* Estilos para el botón */\r\nbutton {\r\n    padding: 5px 8px; /* Añade un padding de 5px arriba y abajo, y 8px a los lados */\r\n    background-color: #B8C0FF; /* Establece el color de fondo del botón */\r\n    color: white; /* Establece el color del texto en el botón */\r\n    border: none; /* Elimina el borde del botón */\r\n    border-radius: 50px; /* Redondea las esquinas del botón */\r\n    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */\r\n}\r\n\r\n/* Estilos para la lista no ordenada */\r\nul {\r\n    list-style: none; /* Elimina los puntos de la lista */\r\n    padding: 0; /* Elimina el padding predeterminado */\r\n}\r\n\r\n/* Estilos para los elementos de la lista con forma de nube */\r\nli {\r\n    background-color: #f4f4f4; /* Color de fondo de la \"nube\" */\r\n    padding: 20px;\r\n    margin-top: 20px;\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    border-radius: 50px; /* Redondea el recuadro principal */\r\n    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto de elevación */\r\n    z-index: 1; /* Asegura que el recuadro esté delante de los pseudo-elementos */\r\n}\r\n\r\n/* Ajustes adicionales para las tareas completadas */\r\nli.completed {\r\n    text-decoration: line-through;\r\n    color: #888;\r\n    background-color: #e0e0e0; /* Color de fondo diferente para las nubes completadas */\r\n}\r\n\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -269,6 +288,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -615,6 +669,16 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/Imagenes/nubesfondo.jpg":
+/*!*************************************!*\
+  !*** ./src/Imagenes/nubesfondo.jpg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "a084b2a9d4ad089d49de.jpg";
+
 /***/ })
 
 /******/ 	});
@@ -643,6 +707,9 @@ module.exports = styleTagTransform;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -668,6 +735,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -682,6 +761,55 @@ module.exports = styleTagTransform;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
